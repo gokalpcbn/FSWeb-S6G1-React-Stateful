@@ -577,7 +577,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function getWrappedName(outerType, innerType, wrapperName) {
       var displayName = outerType.displayName;
       if (displayName) {
@@ -652,7 +651,6 @@ if ("development" !== "production") {
           // eslint-disable-next-line no-fallthrough
         }
       }
-
       return null;
     }
     var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -1146,7 +1144,6 @@ if ("development" !== "production") {
       mapChildren(children, function () {
         n++; // Don't return anything
       });
-
       return n;
     }
 
@@ -1651,7 +1648,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         disabledDepth++;
       }
     }
@@ -1691,7 +1687,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         if (disabledDepth < 0) {
           error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
         }
@@ -2984,7 +2979,6 @@ if ("development" !== "production") {
         isMessageLoopRunning = false;
       } // Yielding to the browser will give it a chance to paint, so we can
     };
-
     var schedulePerformWorkUntilDeadline;
     if (typeof localSetImmediate === 'function') {
       // Node.js and old IE.
@@ -3313,7 +3307,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkKeyStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3322,7 +3315,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkPropStringCoercion(value, propName) {
       {
         if (willCoercionThrow(value)) {
@@ -3331,7 +3323,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkCSSPropertyStringCoercion(value, propName) {
       {
         if (willCoercionThrow(value)) {
@@ -3340,7 +3331,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkHtmlStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3349,7 +3339,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkFormFieldValueStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3979,7 +3968,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         disabledDepth++;
       }
     }
@@ -4019,7 +4007,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         if (disabledDepth < 0) {
           error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
         }
@@ -4350,7 +4337,6 @@ if ("development" !== "production") {
           // eslint-disable-next-line no-fallthrough
         }
       }
-
       return null;
     }
     function getWrappedName$1(outerType, innerType, wrapperName) {
@@ -5433,7 +5419,6 @@ if ("development" !== "production") {
       if (!isCustomProperty && typeof value === 'number' && value !== 0 && !(isUnitlessNumber.hasOwnProperty(name) && isUnitlessNumber[name])) {
         return value + 'px'; // Presumes implicit 'px' suffix for unitless numbers
       }
-
       {
         checkCSSPropertyStringCoercion(value, name);
       }
@@ -10241,7 +10226,6 @@ if ("development" !== "production") {
       return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
       ;
     }
-
     var objectIs = typeof Object.is === 'function' ? Object.is : is;
 
     /**
@@ -12952,7 +12936,6 @@ if ("development" !== "production") {
       // }
       // return value;
     }
-
     function registerSuspenseInstanceRetry(instance, callback) {
       instance._reactRetry = callback;
     }
@@ -13259,7 +13242,6 @@ if ("development" !== "production") {
               // below since it will bail out on the isMounted check later.
             }
           }
-
           return targetInst;
         }
         targetNode = parentNode;
@@ -16957,7 +16939,6 @@ if ("development" !== "production") {
         return true;
       } // If it's a boundary we should avoid, then we prefer to bubble up to the
     }
-
     function findFirstSuspended(row) {
       var node = row;
       while (node !== null) {
@@ -19296,7 +19277,6 @@ if ("development" !== "production") {
             // For a more detailed description of this block, see:
             // https://github.com/facebook/react/pull/13384
           }
-
           var componentName = source ? getComponentNameFromFiber(source) : null;
           var componentNameMessage = componentName ? "The above error occurred in the <" + componentName + "> component:" : 'The above error occurred in one of your React components:';
           var errorBoundaryMessage;
@@ -19702,7 +19682,6 @@ if ("development" !== "production") {
         return null;
       } // This function is called when a Suspense boundary suspends. It returns the
     }
-
     var ReactCurrentOwner$1 = ReactSharedInternals.ReactCurrentOwner;
     var didReceiveUpdate = false;
     var didWarnAboutBadClass;
@@ -22329,7 +22308,6 @@ if ("development" !== "production") {
                   throw new Error('We must have new props for new mounts. This error is likely ' + 'caused by a bug in React. Please file an issue.');
                 } // This can happen when we abort work.
               }
-
               var _rootContainerInstance = getRootHostContainer();
               var _currentHostContext = getHostContext();
               var _wasHydrated2 = popHydrationState(workInProgress);
@@ -22367,7 +22345,6 @@ if ("development" !== "production") {
                 }
               } // Continue with the normal Suspense path.
             }
-
             if ((workInProgress.flags & DidCapture) !== NoFlags) {
               // Something suspended. Re-render with the fallback children.
               workInProgress.lanes = renderLanes; // Do not reset the effect list.
@@ -25367,7 +25344,6 @@ if ("development" !== "production") {
                 // concurrent events.
               }
             }
-
             if (exitStatus === RootFatalErrored) {
               var _fatalError = workInProgressRootFatalError;
               prepareFreshStack(root, NoLanes);
@@ -26396,7 +26372,6 @@ if ("development" !== "production") {
           ReactCurrentBatchConfig$3.transition = prevTransition; // Once passive effects have run for the tree - giving components a
         }
       }
-
       return false;
     }
     function enqueuePendingPassiveProfilerEffect(fiber) {
@@ -26840,7 +26815,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     var fakeActCallbackNode = {};
     function scheduleCallback$1(priorityLevel, callback) {
       {
@@ -28896,9 +28870,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Sayac;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-/*
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 SAYAÇ Talimatları
 
 Aşağıdaki kısa videoyu izleyin, UI ve Chrome Devtools'a dikkat edin:
@@ -28944,31 +28924,48 @@ ADIM 5:
 ADIM 6:
 	Bu click handler 'sayici' yı sıfırlamak için 'setSayici' yi kullanacak.
 */
-
 /* ADIM 0 buraya*/
 
 function Sayac() {
   /* ADIM 1 buraya*/
+  //let sayici = 0; // native - vanilla script
+  var _useState = (0, _react.useState)(0),
+    _useState2 = _slicedToArray(_useState, 2),
+    sayici = _useState2[0],
+    setSayici = _useState2[1];
+
+  //console.log('sayici', sayici);
+  //useState({})
+  //useState('ali')
 
   var artirici = function artirici() {
     /* ADIM 4 buraya */
+    //sayici++; // native - vanilla script
+    setSayici(sayici + 1);
+    //console.log(sayici);
   };
   var azaltici = function azaltici() {
     /* ADIM 5 */
+    //sayici--;  // native - vanilla script
+    setSayici(sayici - 1);
+    //console.log(sayici);
   };
-  var reset = function reset() {};
+  var reset = function reset() {
+    //sayici=0; // native - vanilla script
+    setSayici(0);
+    //console.log(sayici);
+  };
   var stil = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue' /* ADIM 2 */
+    color: sayici % 2 == 0 ? 'royalblue' : 'crimson' /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-counter container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Saya\xE7"), /*#__PURE__*/_react.default.createElement("div", {
     id: "sayici",
     style: stil
-  }, "Say\u0131 ", sayici, " "), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  }, "Number ", sayici, " ", sayici % 2 == 0 ? 'is even' : 'is odd'), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     id: "artirici",
     onClick: artirici
   }, "Art\u0131r\u0131c\u0131"), /*#__PURE__*/_react.default.createElement("button", {
@@ -28986,9 +28983,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Input;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-/*
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 INPUT Talimatlar
 
 Şu kısa videoyu izleyin:
@@ -29022,38 +29025,46 @@ ADIM 6:
   Inputun başarılı bir şekilde resetlemesi için değerini state'ten almalıdır!
   <input /> öğesine şu şekilde fazladan bir prop eklememiz gerekiyor: value={inputDeğeri}
 */
-
 /* ADIM 0 */
 
 function Input() {
   /* ADIM 1 */
-
+  var _useState = (0, _react.useState)(''),
+    _useState2 = _slicedToArray(_useState, 2),
+    inputDeğeri = _useState2[0],
+    setInputDeğeri = _useState2[1];
   var inputuDeğiştir = function inputuDeğiştir(evt) {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     var value = evt.target.value;
+    var eventPhase = evt.eventPhase,
+      isTrusted = evt.isTrusted;
 
+    //console.log(evt);
+    console.log(eventPhase);
+    console.log(isTrusted);
+    setInputDeğeri(value.toUpperCase());
     /* ADIM 4 */
   };
-
   var reset = function reset() {
     /* ADIM 5 */
+    setInputDeğeri('');
   };
   var stil = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'crimson' /* ADIM 2 */
+    color: inputDeğeri.length >= 10 ? 'crimson' : 'royalblue' /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-input container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Input"), /*#__PURE__*/_react.default.createElement("div", {
     id: "output",
     style: stil
-  }), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
+  }, inputDeğeri), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
     id: "input",
     type: "text",
-    onChange: inputuDeğiştir
+    onChange: inputuDeğiştir,
+    value: inputDeğeri
   }), " ", /*#__PURE__*/_react.default.createElement("button", {
     id: "resetInput",
     onClick: reset
@@ -29119,7 +29130,6 @@ function RuhHalleri() {
     marginBottom: '0.3em',
     color: 'royalblue' /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-moods container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "RuhHalleri"), /*#__PURE__*/_react.default.createElement("div", {
@@ -29292,7 +29302,7 @@ Yorumları takip edin.
 // Bu değişkeni YALNIZCA bir state dilimini başlatmak için kullanın!
 // JSX'te şu anda bu kuralı çiğneyen bir şey var...
 // Export syntaxı, test kitaplığının diziyi içe aktarabilmesi için gereklidir.
-var enIyilerListesi = [{
+var enIyilerListesi = exports.enIyilerListesi = [{
   id: '1',
   isim: 'Ada Lovelace'
 }, {
@@ -29311,7 +29321,6 @@ var enIyilerListesi = [{
   id: '6',
   isim: 'Carol Shaw'
 }];
-exports.enIyilerListesi = enIyilerListesi;
 function Programcilar() {
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
@@ -29328,7 +29337,6 @@ function Programcilar() {
     marginTop: '0.5em',
     color: 'royalblue' // 🤔 kutlarken renk gold'a dönecek
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-programmers container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Programc\u0131lar"), /*#__PURE__*/_react.default.createElement("div", {
@@ -29368,7 +29376,7 @@ var _Programcilar = _interopRequireDefault(require("./components/Programcilar"))
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var container = document.getElementById("root");
 var root = (0, _client.createRoot)(container);
-root.render( /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Sayac.default, null), /*#__PURE__*/_react.default.createElement(_RuhHalleri.default, null), /*#__PURE__*/_react.default.createElement(_Dondurucu.default, null), /*#__PURE__*/_react.default.createElement(_Input.default, null), /*#__PURE__*/_react.default.createElement(_Kareler.default, null), /*#__PURE__*/_react.default.createElement(_Programcilar.default, null)));
+root.render( /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Input.default, null), /*#__PURE__*/_react.default.createElement(_Sayac.default, null), /*#__PURE__*/_react.default.createElement(_Input.default, null), /*#__PURE__*/_react.default.createElement(_Sayac.default, null), /*#__PURE__*/_react.default.createElement(_Input.default, null), /*#__PURE__*/_react.default.createElement(_Sayac.default, null)));
 },{"react":"../node_modules/react/index.js","react-dom/client":"../node_modules/react-dom/client.js","./components/Sayac":"components/Sayac.js","./components/Input":"components/Input.js","./components/RuhHalleri":"components/RuhHalleri.js","./components/Dondurucu":"components/Dondurucu.js","./components/Kareler":"components/Kareler.js","./components/Programcilar":"components/Programcilar.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -29394,7 +29402,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64069" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56817" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
