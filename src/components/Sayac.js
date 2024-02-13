@@ -45,18 +45,17 @@ ADIM 6:
 	Bu click handler 'sayici' yı sıfırlamak için 'setSayici' yi kullanacak.
 */
 
-import React, { useState } from 'react'; /* ADIM 0 buraya*/
-
+import React, { useState } from "react"; /* ADIM 0 buraya*/
 
 export default function Sayac() {
   /* ADIM 1 buraya*/
-	//let sayici = 0; // native - vanilla script
-   let [sayici, setSayici ] = useState(0);
-   
-   //console.log('sayici', sayici);
+  //let sayici = 0; // native - vanilla script
+  let [sayici, setSayici] = useState(0);
+
+  //console.log('sayici', sayici);
   //useState({})
   //useState('ali')
-	
+
   const artirici = () => {
     /* ADIM 4 buraya */
     //sayici++; // native - vanilla script
@@ -76,21 +75,27 @@ export default function Sayac() {
   };
 
   const stil = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: (sayici %2 == 0) ? 'royalblue': 'crimson', /* ADIM 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: sayici % 2 == 0 ? "royalblue" : "crimson" /* ADIM 2 */,
   };
 
   return (
-    <div className='widget-counter container'>
+    <div className="widget-counter container">
       <h2>Sayaç</h2>
-      <div id='sayici' style={stil}>
-        Number {sayici} {(sayici %2 == 0) ? 'is even': 'is odd' }
+      <div id="sayici" style={stil}>
+        Number {sayici} {sayici % 2 == 0 ? "is even" : "is old"}
       </div>
       <div>
-        <button id='artirici' onClick={artirici}>Artırıcı</button>
-        <button id='decrement' onClick={azaltici}>Azaltıcı</button>
-        <button id='resetCount' onClick={reset}>Reset</button>
+        <button id="artirici" onClick={artirici}>
+          Artırıcı
+        </button>
+        <button id="decrement" onClick={azaltici}>
+          Azaltıcı
+        </button>
+        <button id="resetCount" onClick={reset}>
+          Reset
+        </button>
       </div>
     </div>
   );
